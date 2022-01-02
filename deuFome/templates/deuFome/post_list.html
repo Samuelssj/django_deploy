@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Deu Fome</title>
+
 </head>
 <body>
 <div>
     <h1><a href="/">Deu fome</a></h1>
+     {{posts}}
 </div>
 
 <div>
-    <p>publicado em 01/01/2022</p>
-    <h2><a href=""> POSTAGEM 2</a></h2>
+    <h2><a href=""> POSTAGENS</a></h2>
+    {% for post in posts %}
+    <div>
+        <h2><a href="">{{post.title}}</a></h2>
+        <p> published: {{post.created_date}}</p>
+        <p>texto: {{post.text|linebreaksbr}}</p>
+    </div>
+    {% endfor %}
     <p>Segundo post</p>
 </div>
-
-<div>
-       <h2><a href=""> POSTAGEM 3</a></h2>
-    <P>terceiro post</P>
-</div>
-
 
 </body>
 </html>

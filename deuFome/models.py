@@ -2,6 +2,8 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 
+
+#post = makeorder
 # Create your models here.
 
 class MakeOrder(models.Model):
@@ -18,4 +20,5 @@ class MakeOrder(models.Model):
 
     def __str__(self):
         return self.title
+
 
